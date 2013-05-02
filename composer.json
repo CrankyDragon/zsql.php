@@ -6,9 +6,9 @@
     }
   ],
   "autoload": {
-    "files": {
+    "files": [
       "build/zsql.phar"
-    },
+    ],
     "psr-0": {
       "zsql": "phar://zsql.phar"
     }
