@@ -7,7 +7,7 @@ if( empty($_SERVER['PHAR']) ) {
   $srcpath = $basepath . '/src/zsql';
 } else {
   require $basepath . '/build/zsql.phar';
-  $srcpath = 'phar://zsql.phar';
+  $srcpath = 'phar://zsql.phar/zsql';
 }
 
 

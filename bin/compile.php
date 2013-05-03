@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-$srcRoot = './src/zsql';
+$srcRoot = './src';
 $buildRoot = './build';
 
 try {
