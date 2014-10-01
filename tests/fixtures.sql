@@ -23,3 +23,12 @@ INSERT INTO `zsql`.`fixture1` VALUES
 DROP TABLE IF EXISTS `zsql`.`fixture2`;
 CREATE TABLE `zsql`.`fixture2` LIKE `zsql`.`fixture1`;
 INSERT `zsql`.`fixture2` SELECT * FROM `zsql`.`fixture1`;
+
+DROP TABLE IF EXISTS `zsql`.`migrations`;
+CREATE TABLE `zsql`.`migrations` (
+  `version` bigint(20) unsigned NOT NULL,
+  `name` varchar(255) default NULL,
+  `state` enum('initial', 'failed', 'failed-down', 'success') NOT NULL default 'initial',
+  PRIMARY KEY (`version`),
+  KEY `state` (`state`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;

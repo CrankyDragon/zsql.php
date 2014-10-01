@@ -24,4 +24,8 @@ require $srcpath . '/Database.php';
 require $srcpath . '/Result.php';
 require $srcpath . '/Model.php';
 
+require $srcpath . '/../Migrator/Exception.php';
+require $srcpath . '/../Migrator/Migrator.php';
+require $srcpath . '/../Migrator/MigrationAbstract.php';
+
 require $testpath . '/common.php';
